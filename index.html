@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="square" style="background-color: black; width: 200px; height: 200px;">
+        Quadrado
+    </div>
+
+    <div style="margin-top: 10px;">
+        <button id="btnVermelho">Vermelho</button>
+        <button id="btnAzul">Azul</button>
+        <button id="escrever">Escrever</button>
+    </div>
+
+    <h1 id="text"></h1>
+</body>
+<script>
+    const square = $('#square')
+    const btnVermelho = $('#btnVermelho')
+    const btnAzul = $('#btnAzul')
+    const escrever = $('#escrever')
+    const text = $('#text')
+
+    btnVermelho.click(function() {
+      square.css ('background-color', 'red')
+      square.css ('color', 'white')
+    })
+
+    btnAzul.click(function() {
+      square.css ('background-color', 'blue')
+      square.css ('color', 'white')
+    })
+      
+
+    escrever.click(function() {
+        const myText = 'Criar Texto '
+        var i = 0
+
+      setInterval(() => {
+        text.append (myText.charAt(i))
+        i++
+      }, 100)
+
+    })
+    
+
+</script>
+</html>
